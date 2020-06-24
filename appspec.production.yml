@@ -3,3 +3,8 @@ os: linux
 files:
   - source: /
     destination: /var/www/html/wayapay
+hooks:
+  AfterInstall:
+    - location: scripts/restratimage.sh
+      timeout: 300
+      runas: root
